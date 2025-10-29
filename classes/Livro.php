@@ -2,10 +2,13 @@
 class Livro {
     private $titulo;
     private $autor;
+    private $nota; // <-- NOVA PROPRIEDADE
 
-    public function __construct($titulo, $autor) {
+    // Ajustamos o construtor para receber a nota
+    public function __construct($titulo, $autor, $nota) { 
         $this->titulo = $titulo;
         $this->autor = $autor;
+        $this->nota = $nota; // <-- ATRIBUIÇÃO
     }
 
     public function getTitulo() {
@@ -14,5 +17,10 @@ class Livro {
 
     public function getAutor() {
         return $this->autor;
+    }
+
+    // <-- NOVO MÉTODO
+    public function getNota() {
+        return $this->nota;
     }
 }
